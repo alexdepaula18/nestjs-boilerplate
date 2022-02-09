@@ -1,10 +1,24 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { User } from '../entities/user.entity';
 
 export class ReturnUserDto {
   @ApiProperty()
-  user: User;
+  id: string;
 
   @ApiProperty()
-  message: string;
+  email: string;
+
+  @ApiProperty()
+  name: string;
+
+  @ApiProperty()
+  role: string;
+
+  @ApiProperty()
+  status: boolean;
+
+  @ApiProperty()
+  createdAt: Date;
+
+  @ApiProperty()
+  updatedAt: Date;
 }
